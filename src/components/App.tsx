@@ -3,6 +3,7 @@ import {
     ThemeProvider,
     createTheme,
     PaletteMode,
+    Paper,
 } from "@mui/material";
 import { useState } from "react";
 import "../styles/App.css";
@@ -74,11 +75,13 @@ function App() {
         <div className="App">
             <ThemeProvider theme={lightTheme}>
                 <CssBaseline />
-                <Navbar
-                    mode={mode}
-                    handleThemeChange={handleThemeChange}
-                ></Navbar>
-                <Resume></Resume>
+                <Paper sx={{ bgcolor: "#E0E0E0", minHeight: "100vh" }}>
+                    <Navbar
+                        mode={mode}
+                        handleThemeChange={handleThemeChange}
+                    ></Navbar>
+                    <Resume></Resume>
+                </Paper>
             </ThemeProvider>
         </div>
     );
