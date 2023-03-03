@@ -1,6 +1,7 @@
 import {
     Card,
     CardContent,
+    CardMedia,
     Grid,
     List,
     ListItem,
@@ -15,6 +16,12 @@ export default function Resume() {
                 <Grid item xs={4}>
                     <Card>
                         <CardContent>
+                            <CardMedia
+                                component="img"
+                                height={140}
+                                src="C:\Users\max25\Desktop\CS_Material\Web Dev\portfolio\src\static\images\020d319415766df4cc2cdd7ad0e9ee46.jpg"
+                                // relative path : src\static\images\020d319415766df4cc2cdd7ad0e9ee46.jpg
+                            ></CardMedia>
                             <Typography variant="h5">Summary</Typography>
                             <Typography variant="body1">
                                 Self-taught software developer with a proven
