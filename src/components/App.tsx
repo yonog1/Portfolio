@@ -4,11 +4,17 @@ import {
     createTheme,
     PaletteMode,
     Paper,
+    Typography,
+    TextField,
+    Grid,
+    Card,
 } from "@mui/material";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import "../styles/App.css";
 import Navbar from "./Navbar";
 import Resume from "./Resume";
+import Summary from "./text/Summary";
 
 function App() {
     const [mode, setMode] = useState<PaletteMode>("light");
@@ -75,12 +81,29 @@ function App() {
         <div className="App">
             <ThemeProvider theme={lightTheme}>
                 <CssBaseline />
-                <Paper sx={{ bgcolor: "#E0E0E0", minHeight: "100vh" }}>
+                <Paper
+                    sx={
+                        mode === "light"
+                            ? { bgcolor: "#cfcfcf", minHeight: "100vh" }
+                            : { bgcolor: "#37474F", minHeight: "100vh" }
+                    }
+                >
                     <Navbar
                         mode={mode}
                         handleThemeChange={handleThemeChange}
                     ></Navbar>
-                    <Resume></Resume>
+                    <Grid2
+                        container
+                        padding={"1vh"}
+                        direction="column"
+                        justifyContent={"center"}
+                        spacing={0}
+                        alignItems={"center"}
+                    >
+                        <Grid item xs={3}>
+                            <Summary />
+                        </Grid>
+                    </Grid2>
                 </Paper>
             </ThemeProvider>
         </div>

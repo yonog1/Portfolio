@@ -8,22 +8,24 @@ import {
     Typography,
 } from "@mui/material";
 import React from "react";
+import profilePhoto from "../static/images/020d319415766df4cc2cdd7ad0e9ee46.jpg";
 
 export default function Resume() {
     return (
         <>
-            <Grid container padding={"1vh"} spacing={2}>
-                <Grid item xs={4}>
+            <Grid
+                container
+                padding={"1vh"}
+                direction="column"
+                justifyContent={"center"}
+                spacing={0}
+                alignItems={"center"}
+            >
+                <Grid item xs={3}>
                     <Card>
+                        <Typography variant="h5">Summary</Typography>
                         <CardContent>
-                            <CardMedia
-                                component="img"
-                                height={140}
-                                src="C:\Users\max25\Desktop\CS_Material\Web Dev\portfolio\src\static\images\020d319415766df4cc2cdd7ad0e9ee46.jpg"
-                                // relative path : src\static\images\020d319415766df4cc2cdd7ad0e9ee46.jpg
-                            ></CardMedia>
-                            <Typography variant="h5">Summary</Typography>
-                            <Typography variant="body1">
+                            <Typography variant="body1" padding={1}>
                                 Self-taught software developer with a proven
                                 ability to adapt to both self-starting and
                                 collaborative environments while staying focused
@@ -36,7 +38,7 @@ export default function Resume() {
                     </Card>
                 </Grid>
 
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                     <Card>
                         <CardContent>
                             <Typography variant="h5">Certifications</Typography>
@@ -56,7 +58,7 @@ export default function Resume() {
                     </Card>
                 </Grid>
 
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                     <Card>
                         <CardContent>
                             <List>
