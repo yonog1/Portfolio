@@ -1,6 +1,3 @@
-import { ThemeProvider } from "@emotion/react";
-import { createTheme, CssBaseline } from "@mui/material";
-import { green, purple, grey, blue } from "@mui/material/colors";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";

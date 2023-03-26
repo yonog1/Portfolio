@@ -1,5 +1,4 @@
-import { Grid, List, Typography, ListItem } from "@mui/material";
-import React from "react";
+import { List, Typography, ListItem } from "@mui/material";
 
 export default function SkillsText() {
     return (

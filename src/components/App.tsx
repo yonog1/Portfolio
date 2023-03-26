@@ -4,16 +4,17 @@ import {
     createTheme,
     PaletteMode,
     Paper,
-    Typography,
-    TextField,
     Grid,
     Card,
+    CardContent,
 } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import "../styles/App.css";
 import Navbar from "./Navbar";
-import Resume from "./Resume";
+import Certifications from "./text/Certifications";
+import Objective from "./text/Objective";
+import Skills from "./text/Skills";
 import Summary from "./text/Summary";
 
 function App() {
@@ -92,18 +93,40 @@ function App() {
                         mode={mode}
                         handleThemeChange={handleThemeChange}
                     ></Navbar>
-                    <Grid2
+                    <Grid //summary
                         container
-                        padding={"1vh"}
+                        padding={1}
                         direction="column"
                         justifyContent={"center"}
-                        spacing={0}
                         alignItems={"center"}
                     >
-                        <Grid item xs={3}>
+                        <Grid item xs={12} marginBottom={1}>
                             <Summary />
                         </Grid>
-                    </Grid2>
+                        <Grid container spacing={2}>
+                            <Grid item xs={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Certifications />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Skills />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Objective />
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </Paper>
             </ThemeProvider>
         </div>
