@@ -5,17 +5,14 @@ import {
     PaletteMode,
     Paper,
     Grid,
-    Card,
-    CardContent,
 } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useState } from "react";
 import "../styles/App.css";
 import Navbar from "./Navbar";
-import Certifications from "./text/Certifications";
-import Objective from "./text/Objective";
-import Skills from "./text/Skills";
-import Summary from "./text/Summary";
+import Certifications from "./cards/Certifications";
+import Objective from "./cards/Objective";
+import Skills from "./cards/Skills";
+import Summary from "./cards/Summary";
 
 function App() {
     const [mode, setMode] = useState<PaletteMode>("light");
@@ -105,25 +102,13 @@ function App() {
                         </Grid>
                         <Grid container spacing={2}>
                             <Grid item xs={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Certifications />
-                                    </CardContent>
-                                </Card>
+                                <Certifications />
                             </Grid>
                             <Grid item xs={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Skills />
-                                    </CardContent>
-                                </Card>
+                                <Skills />
                             </Grid>
                             <Grid item xs={4}>
-                                <Card>
-                                    <CardContent>
-                                        <Objective />
-                                    </CardContent>
-                                </Card>
+                                <Objective />
                             </Grid>
                         </Grid>
                     </Grid>
