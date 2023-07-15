@@ -18,18 +18,6 @@ function App() {
     const [mode, setMode] = useState<PaletteMode>("light");
 
     const lightTheme = createTheme({
-        /*
-        palette: {
-            mode: "light",
-            primary: {
-                main: "#0288D1",
-                contrastText: "#053858",
-            },
-            secondary: {
-                main: "#546E7A",
-            },
-        },
-        */
         palette: {
             mode: mode === "dark" ? "dark" : "light",
             primary: {

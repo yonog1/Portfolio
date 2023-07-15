@@ -7,6 +7,7 @@ import {
     Switch,
     IconButton,
     PaletteMode,
+    Button,
 } from "@mui/material";
 
 interface Props {
@@ -33,15 +34,27 @@ function Navbar({ mode, handleThemeChange }: Props) {
                         )}
                         <Switch onChange={handleThemeChange} />
                     </Box>
-                    <Typography variant="h4" fontFamily={"Segoe UI"}>
-                        Yonatan Goldin
-                    </Typography>
+                    <Box
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                    >
+                        <Typography variant="h4" fontFamily="Segoe UI">
+                            Yonatan Goldin
+                        </Typography>
+                        <Box display="flex" mt={1}>
+                            <Button color="inherit">Home</Button>
+                            <Button color="inherit">About</Button>
+                            <Button color="inherit">Projects</Button>
+                            <Button color="inherit">Contact</Button>
+                        </Box>
+                    </Box>
                     <Box display={"flex"}>
                         <IconButton
                             size="large"
                             href="https://www.linkedin.com/in/yonatan-goldin-098b221b3/"
                             rel="noopener noreferrer"
-                            target={"_blank"}
+                            target="_blank"
                         >
                             <LinkedIn />
                         </IconButton>
@@ -49,7 +62,7 @@ function Navbar({ mode, handleThemeChange }: Props) {
                             size="large"
                             href="https://github.com/yonog1"
                             rel="noopener noreferrer"
-                            target={"_blank"}
+                            target="_blank"
                         >
                             <GitHub />
                         </IconButton>
@@ -59,4 +72,5 @@ function Navbar({ mode, handleThemeChange }: Props) {
         </>
     );
 }
+
 export default Navbar;
