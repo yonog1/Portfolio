@@ -11,8 +11,8 @@ import "../styles/App.css";
 import Navbar from "./Navbar";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import HomePage from "./Pages/HomePage";
 import Projects from "./Pages/Projects";
-import HomePage from "./cards/Pages/HomePage";
 
 const router = createBrowserRouter([
     {

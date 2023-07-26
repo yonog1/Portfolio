@@ -1,13 +1,13 @@
 import { Grid } from "@mui/material";
-import Certifications from "../Certifications";
-import Objective from "../Objective";
-import Skills from "../Skills";
-import Summary from "../Summary";
+import Certifications from "../cards/Certifications";
+import Objective from "../cards/Objective";
+import Skills from "../cards/Skills";
+import Summary from "../cards/Summary";
 
 function Home() {
     return (
         <div>
-            <Grid //summary
+            <Grid
                 container
                 padding={1}
                 direction="column"
