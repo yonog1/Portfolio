@@ -1,15 +1,15 @@
 import {
-    List,
-    Typography,
-    ListItem,
+    Box,
     Card,
     CardContent,
-    Box,
     CardMedia,
+    List,
+    ListItem,
+    Typography,
 } from "@mui/material";
 import csharp from "../../static/images/csharp.png";
-import py from "../../static/images/python.png";
 import jscript from "../../static/images/javascript.svg";
+import py from "../../static/images/python.png";
 
 export default function SkillsText() {
     return (
@@ -35,9 +35,9 @@ export default function SkillsText() {
                             justifyContent: "space-around",
                         }}
                     >
-                        <Box component="img" src={csharp} width={"8rem"}></Box>
-                        <Box component="img" src={py} width={"8rem"}></Box>
-                        <Box component="img" src={jscript} width={"8rem"}></Box>
+                        <Box component="img" src={csharp} width={"7rem"}></Box>
+                        <Box component="img" src={py} width={"7rem"}></Box>
+                        <Box component="img" src={jscript} width={"7rem"}></Box>
                     </CardMedia>
                 </CardContent>
             </Card>

@@ -1,4 +1,4 @@
-import { Typography, List, ListItem, Card, CardContent } from "@mui/material";
+import { Card, CardContent, List, ListItem, Typography } from "@mui/material";
 
 export default function CertificationsText() {
     return (

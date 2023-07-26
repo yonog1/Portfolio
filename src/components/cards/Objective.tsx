@@ -10,12 +10,10 @@ export default function ObjectiveText() {
                         variant="body1"
                         sx={{ wordBreak: "break-word", padding: ".5rem" }}
                     >
-                        Self-taught software developer with a proven ability to
-                        adapt to both self-starting and collaborative
-                        environments while staying focused on achieving
-                        high-quality results under strict deadlines.<br></br>{" "}
-                        Autodidact, and passionate about programming, looking
-                        for opportunities to grow and learn as a developer.
+                        Finding an entry into the tech field that will allow me
+                        to combine my experience from the army in Networking and
+                        System administration, together with my knowledge of
+                        programming and web development.
                     </Typography>
                 </CardContent>
             </Card>
