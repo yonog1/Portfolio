@@ -1,18 +1,37 @@
 import {
     CssBaseline,
-    ThemeProvider,
-    createTheme,
     PaletteMode,
     Paper,
-    Grid,
+    ThemeProvider,
+    createTheme,
 } from "@mui/material";
 import { useState } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "../styles/App.css";
 import Navbar from "./Navbar";
-import Certifications from "./cards/Certifications";
-import Objective from "./cards/Objective";
-import Skills from "./cards/Skills";
-import Summary from "./cards/Summary";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Projects from "./Pages/Projects";
+import HomePage from "./cards/Pages/HomePage";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <HomePage />,
+    },
+    {
+        path: "/about",
+        element: <About />,
+    },
+    {
+        path: "/projects",
+        element: <Projects />,
+    },
+    {
+        path: "/contact",
+        element: <Contact />,
+    },
+]);
 
 function App() {
     const [mode, setMode] = useState<PaletteMode>("light");
@@ -78,28 +97,7 @@ function App() {
                         mode={mode}
                         handleThemeChange={handleThemeChange}
                     ></Navbar>
-                    <Grid //summary
-                        container
-                        padding={1}
-                        direction="column"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                    >
-                        <Grid item xs={12} marginBottom={1}>
-                            <Summary />
-                        </Grid>
-                        <Grid container spacing={2}>
-                            <Grid item xs={4}>
-                                <Certifications />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Skills />
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Objective />
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                    <RouterProvider router={router} />
                 </Paper>
             </ThemeProvider>
         </div>

@@ -1,5 +1,10 @@
 function About() {
-    return <div>About</div>;
+    return (
+        <div>
+            <h1>About</h1>
+            <p>some text</p>
+        </div>
+    );
 }
 
 export default About;

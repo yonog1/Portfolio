@@ -1,9 +1,8 @@
 import { ThemeOptions, createTheme } from "@mui/material";
-import { navbarMode } from "./../index";
-
+const mode = "light";
 export const themeOptions: ThemeOptions = createTheme({
     palette: {
-        mode: navbarMode === "light" ? "light" : "light",
+        mode: mode === "light" ? "light" : "light",
         primary: {
             main: "#3e89a8",
         },
