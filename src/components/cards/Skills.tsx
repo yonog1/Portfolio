@@ -34,6 +34,22 @@ export default function SkillsText() {
                             marginTop: "2.5rem",
                             justifyContent: "space-around",
                         }}
+                        sx={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            justifyContent: "center",
+                            "& > img": {
+                                width: "7rem",
+                                height: "auto",
+                                objectFit: "contain",
+                                margin: "0.5rem",
+                            },
+                            "@media (max-width: 500px)": {
+                                "& > img": {
+                                    width: "100px", // Adjust the width for smaller screens
+                                },
+                            },
+                        }}
                     >
                         <Box component="img" src={csharp} width={"7rem"}></Box>
                         <Box component="img" src={py} width={"7rem"}></Box>
