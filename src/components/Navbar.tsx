@@ -1,14 +1,15 @@
-import { ModeNight, LightMode, GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LightMode, LinkedIn, ModeNight } from "@mui/icons-material";
 import {
     AppBar,
-    Toolbar,
     Box,
-    Typography,
-    Switch,
+    Button,
     IconButton,
     PaletteMode,
-    Button,
+    Switch,
+    Toolbar,
+    Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 interface Props {
     mode: PaletteMode;
@@ -32,7 +33,11 @@ function Navbar({ mode, handleThemeChange }: Props) {
                         ) : (
                             <LightMode sx={{ color: "yellow" }}></LightMode>
                         )}
-                        <Switch onChange={handleThemeChange} />
+                        <Switch
+                            color="primary"
+                            checked={mode === "dark"}
+                            onChange={handleThemeChange}
+                        />
                     </Box>
                     <Box
                         display="flex"
@@ -42,11 +47,59 @@ function Navbar({ mode, handleThemeChange }: Props) {
                         <Typography variant="h4" fontFamily="Segoe UI">
                             Yonatan Goldin
                         </Typography>
-                        <Box display="flex" mt={1}>
-                            <Button color="inherit">Home</Button>
-                            <Button color="inherit">About</Button>
-                            <Button color="inherit">Projects</Button>
-                            <Button color="inherit">Contact</Button>
+                        <Box
+                            display="flex"
+                            mt={1}
+                            sx={
+                                mode === "light"
+                                    ? { color: "rgb(35,70,85)" }
+                                    : { color: "#ffffff" }
+                            }
+                        >
+                            <Link to={"/"}>
+                                <Button
+                                    sx={
+                                        mode === "light"
+                                            ? { color: "rgb(35,70,85)" }
+                                            : { color: "#ffffff" }
+                                    }
+                                >
+                                    Home
+                                </Button>
+                            </Link>
+                            <Link to={"/about"}>
+                                <Button
+                                    sx={
+                                        mode === "light"
+                                            ? { color: "rgb(35,70,85)" }
+                                            : { color: "#ffffff" }
+                                    }
+                                >
+                                    About
+                                </Button>
+                            </Link>
+                            <Link to={"/contact"}>
+                                <Button
+                                    sx={
+                                        mode === "light"
+                                            ? { color: "rgb(35,70,85)" }
+                                            : { color: "#ffffff" }
+                                    }
+                                >
+                                    Contact
+                                </Button>
+                            </Link>
+                            <Link to={"/projects"}>
+                                <Button
+                                    sx={
+                                        mode === "light"
+                                            ? { color: "rgb(35,70,85)" }
+                                            : { color: "#ffffff" }
+                                    }
+                                >
+                                    Projects
+                                </Button>
+                            </Link>
                         </Box>
                     </Box>
                     <Box display={"flex"}>

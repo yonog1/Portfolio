@@ -6,7 +6,7 @@ import {
     createTheme,
 } from "@mui/material";
 import { useState } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "../styles/App.css";
 import Navbar from "./Navbar";
 import About from "./Pages/About";
@@ -14,27 +14,14 @@ import Contact from "./Pages/Contact";
 import HomePage from "./Pages/HomePage";
 import Projects from "./Pages/Projects";
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <HomePage />,
-    },
-    {
-        path: "/about",
-        element: <About />,
-    },
-    {
-        path: "/projects",
-        element: <Projects />,
-    },
-    {
-        path: "/contact",
-        element: <Contact />,
-    },
-]);
-
 function App() {
-    const [mode, setMode] = useState<PaletteMode>("light");
+    // checks if dark mode is the on in the browser
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // sets mode depending on 'darkThemeMq'
+    const [mode, setMode] = useState<PaletteMode>(
+        darkThemeMq.matches ? "dark" : "light"
+    );
 
     const lightTheme = createTheme({
         palette: {
@@ -97,7 +84,12 @@ function App() {
                         mode={mode}
                         handleThemeChange={handleThemeChange}
                     ></Navbar>
-                    <RouterProvider router={router} />
+                    <Routes>
+                        <Route path="/" element={<HomePage />}></Route>
+                        <Route path="/about" element={<About />}></Route>
+                        <Route path="/contact" element={<Contact />}></Route>
+                        <Route path="/projects" element={<Projects />}></Route>
+                    </Routes>
                 </Paper>
             </ThemeProvider>
         </div>
