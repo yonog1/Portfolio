@@ -17,6 +17,10 @@ interface Props {
 }
 
 function Navbar({ mode, handleThemeChange }: Props) {
+    const navBtnsStyle =
+        mode === "light"
+            ? { color: "#10384a", fontSize: "1rem" }
+            : { color: "#ffffff", fontSize: "1rem" };
     return (
         <>
             <AppBar position="static">
@@ -50,55 +54,19 @@ function Navbar({ mode, handleThemeChange }: Props) {
                         <Box
                             display="flex"
                             mt={1}
-                            sx={
-                                mode === "light"
-                                    ? { color: "rgb(35,70,85)" }
-                                    : { color: "#ffffff" }
-                            }
+                            //style={{ color: "primary.contrastText" }}
                         >
                             <Link to={"/"}>
-                                <Button
-                                    sx={
-                                        mode === "light"
-                                            ? { color: "rgb(35,70,85)" }
-                                            : { color: "#ffffff" }
-                                    }
-                                >
-                                    Home
-                                </Button>
+                                <Button sx={navBtnsStyle}>Home</Button>
                             </Link>
                             <Link to={"/about"}>
-                                <Button
-                                    sx={
-                                        mode === "light"
-                                            ? { color: "rgb(35,70,85)" }
-                                            : { color: "#ffffff" }
-                                    }
-                                >
-                                    About
-                                </Button>
+                                <Button sx={navBtnsStyle}>About</Button>
                             </Link>
                             <Link to={"/contact"}>
-                                <Button
-                                    sx={
-                                        mode === "light"
-                                            ? { color: "rgb(35,70,85)" }
-                                            : { color: "#ffffff" }
-                                    }
-                                >
-                                    Contact
-                                </Button>
+                                <Button sx={navBtnsStyle}>Contact</Button>
                             </Link>
                             <Link to={"/projects"}>
-                                <Button
-                                    sx={
-                                        mode === "light"
-                                            ? { color: "rgb(35,70,85)" }
-                                            : { color: "#ffffff" }
-                                    }
-                                >
-                                    Projects
-                                </Button>
+                                <Button sx={navBtnsStyle}>Projects</Button>
                             </Link>
                         </Box>
                     </Box>
