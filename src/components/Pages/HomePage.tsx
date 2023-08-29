@@ -10,6 +10,7 @@ function Home() {
             <Grid
                 container
                 padding={1}
+                display={"flex"}
                 direction="column"
                 justifyContent={"center"}
                 alignItems={"center"}
@@ -18,13 +19,13 @@ function Home() {
                     <Summary />
                 </Grid>
                 <Grid container spacing={2}>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <Certifications />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <Skills />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <Objective />
                     </Grid>
                 </Grid>

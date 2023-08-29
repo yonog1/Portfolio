@@ -23,15 +23,15 @@ function Projects() {
             title: "Ecommerce store template",
             description: "Store web site with a catalog and a basket.",
             imageUrl:
-                "https://www.upwork.com/att/download/portfolio/persons/uid/1675594425740705792/profile/projects/files/4f53b5f2-8d44-4716-9aef-0e9a90ceaa53",
+                "https://user-images.githubusercontent.com/38842103/256665922-57630e43-e197-4b31-9a56-0c896addb4e1.png",
             githubUrl: "https://github.com/yonog1/Directory-encryptor",
         },
         {
             title: "Flash Card Quiz Game",
             description:
-                "Trivia card game made with Open Trivia DB (OpendTDB) and React JS on the frontend.",
+                "Trivia card game made with Open Trivia DB (OpendTDB) and React JS on the front end.",
             imageUrl:
-                "https://www.upwork.com/att/download/portfolio/persons/uid/1675594425740705792/profile/projects/files/ddc8f2d1-7ad5-4090-8ca4-74e0879a0ca2",
+                "https://user-images.githubusercontent.com/38842103/256989607-59542f20-fe85-4fa4-9f5f-8cce7211c89b.png",
             githubUrl: "https://github.com/yonog1/quiz",
         },
         // Add more projects data as needed
