@@ -13,8 +13,7 @@ export default function CertificationsText() {
                                 Networks
                             </ListItem>
                             <ListItem>
-                                Intro to Computer Science - University of Tel
-                                Aviv
+                                Intro to Computer Science - Tel Aviv University
                             </ListItem>
                         </Typography>
                     </List>

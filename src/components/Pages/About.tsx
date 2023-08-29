@@ -17,22 +17,32 @@ function About() {
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Typography variant="body1" paragraph>
-                        Hi! I'm [Your Name], a passionate and creative developer
-                        with [X] years of experience in [Your Area of
-                        Expertise]. I love building user-friendly and performant
-                        web applications that solve real-world problems.
+                        Hello there! I'm Yonatan, am self taught developer who
+                        is very passionate about technology. I love learning new
+                        tools and technologies to help me build my projects and
+                        apps in the quickest and simplest way possible. For me,
+                        each time im faced with a situation where I need to
+                        learn something new to implement or use, I see it as a
+                        challenge!
                     </Typography>
                     <Typography variant="body1" paragraph>
-                        In my free time, I enjoy contributing to open-source
-                        projects and staying up-to-date with the latest
-                        technologies. I also love attending tech meetups and
-                        conferences to connect with like-minded developers.
+                        In my free time, I enjoy working on my personal projects
+                        and staying up-to-date with the latest technologies. I
+                        also love competitive video games, such as
+                        Counter-Strike and Rocket League. One of my biggest
+                        passions is football and keeping up with the best teams
+                        and competitions around the globe.
                     </Typography>
                     <Typography variant="body1" paragraph>
-                        My skills include [List of Skills], and I have
-                        experience working with [Technologies/Frameworks]. I
-                        believe in continuous learning and always strive to
-                        expand my knowledge in the ever-evolving tech landscape.
+                        I'm a self-learner who is driven by curiosity,
+                        introspective in the decisions I make and how I express
+                        myself and always try to learn from the people around
+                        me. I have experience working with Python and the Django
+                        framework, Javascript and Typescript for web programming
+                        and React and C# and .Net Core for desktop apps and web
+                        APIs. I believe in continuous learning and always strive
+                        to expand my knowledge in the ever-evolving tech
+                        landscape.
                     </Typography>
                 </Grid>
             </Grid>
@@ -42,26 +52,16 @@ function About() {
                     Experience
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                    Software Engineer | Company XYZ | Jan 20XX - Present
+                    System Administrator and Network Engineer | IDF | Mar 21 -
+                    Jun 23
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    - Developed and maintained web applications using React and
-                    Node.js.
+                    - Developed and maintained IT and networking infrastructure.
                 </Typography>
                 <Typography variant="body1" paragraph>
                     - Collaborated with cross-functional teams to deliver
-                    high-quality software solutions.
-                </Typography>
-                <Typography variant="h5" gutterBottom>
-                    Frontend Developer | Startup ABC | May 20XX - Dec 20XX
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    - Led the design and development of the company's
-                    customer-facing website.
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    - Implemented responsive UI/UX designs to improve user
-                    engagement.
+                    high-quality networking and automation solutions for
+                    clients/users.
                 </Typography>
             </Box>
         </Box>
