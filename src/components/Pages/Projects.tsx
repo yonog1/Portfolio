@@ -29,7 +29,7 @@ function Projects() {
         {
             title: "Flash Card Quiz Game",
             description:
-                "Trivia card game made with Open Trivia DB (OpendTDB) and React JS on the front end.",
+                "Trivia card game made with Open Trivia DB (OpenTDB) and React JS on the frontend.",
             imageUrl:
                 "https://user-images.githubusercontent.com/38842103/256989607-59542f20-fe85-4fa4-9f5f-8cce7211c89b.png",
             githubUrl: "https://github.com/yonog1/quiz",
@@ -39,15 +39,15 @@ function Projects() {
 
     return (
         <Box p={4}>
-            <Typography variant="h2" gutterBottom>
-                Projects
+            <Typography variant="h3" gutterBottom>
+                Projects :
             </Typography>
             <Grid container spacing={4}>
                 {projectsData.map((project, index) => (
                     <Grid item xs={12} md={6} lg={4} key={index}>
                         <Card
                             sx={{
-                                height: "100%",
+                                height: "90%",
                                 display: "flex",
                                 flexDirection: "column",
                             }}
@@ -56,10 +56,10 @@ function Projects() {
                                 component="img"
                                 image={project.imageUrl}
                                 alt={project.title}
-                                height="300"
+                                height="250"
                             />
                             <CardContent>
-                                <Typography variant="h5" gutterBottom>
+                                <Typography variant="h6" gutterBottom>
                                     {project.title}
                                 </Typography>
                                 <Typography variant="body1" paragraph>
