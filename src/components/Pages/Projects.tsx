@@ -47,9 +47,11 @@ function Projects() {
                     <Grid item xs={12} md={6} lg={4} key={index}>
                         <Card
                             sx={{
-                                height: "90%",
+                                height: "100%",
                                 display: "flex",
                                 flexDirection: "column",
+                                padding: 0,
+                                margin: 0,
                             }}
                         >
                             <CardMedia
