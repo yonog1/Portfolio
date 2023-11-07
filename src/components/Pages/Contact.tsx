@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, TextField, Typography } from "@mui/material";
+import { Box, Grid, Link, Typography } from "@mui/material";
 
 function Contact() {
     return (
@@ -12,38 +12,7 @@ function Contact() {
                         Have a question or want to work together? Feel free to
                         get in touch with me through the form below.
                     </Typography>
-                    <form>
-                        <TextField
-                            label="Name"
-                            variant="outlined"
-                            fullWidth
-                            margin="dense"
-                        />
-                        <TextField
-                            label="Email"
-                            variant="outlined"
-                            fullWidth
-                            margin="dense"
-                        />
-                        <TextField
-                            label="Message"
-                            variant="outlined"
-                            fullWidth
-                            multiline
-                            rows={4}
-                            margin="dense"
-                        />
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            size="large"
-                            type="submit"
-                        >
-                            Send Message
-                        </Button>
-                    </form>
-                </Grid>
-                <Grid item xs={12} md={6}>
+
                     <Typography variant="body1" paragraph>
                         You can also reach out to me through the following
                         channels:
@@ -55,6 +24,7 @@ function Contact() {
                                 yonatangoldin69@gmail.com
                             </Link>
                         </Typography>
+
                         <Typography variant="body1" paragraph>
                             LinkedIn:{" "}
                             <Link
