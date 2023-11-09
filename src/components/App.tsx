@@ -5,7 +5,8 @@ import {
     ThemeProvider,
     createTheme,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import { Route, Routes } from "react-router-dom";
 import "../styles/App.css";
 import Navbar from "./Navbar";
@@ -19,9 +20,14 @@ function App() {
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
     // sets mode depending on 'darkThemeMq'
-    const [mode, setMode] = useState<PaletteMode>(
-        darkThemeMq.matches ? "dark" : "light"
-    );
+    const storedTheme = localStorage.getItem("theme");
+    const initialMode = storedTheme
+        ? (storedTheme as PaletteMode)
+        : darkThemeMq.matches
+        ? "dark"
+        : "light";
+
+    const [mode, setMode] = useState<PaletteMode>(initialMode);
 
     const lightTheme = createTheme({
         palette: {
@@ -65,8 +71,13 @@ function App() {
         },
     });
 
+    useEffect(() => {
+        // store the selected theme in localStorage
+        localStorage.setItem("theme", mode);
+    }, [mode]);
+
     function handleThemeChange() {
-        mode === "light" ? setMode("dark") : setMode("light");
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
     }
 
     return (
