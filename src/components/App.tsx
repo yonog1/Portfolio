@@ -4,11 +4,13 @@ import {
     Paper,
     ThemeProvider,
     createTheme,
+    useMediaQuery,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import "../styles/App.css";
+import CollapsibleNavbar from "./CollapsibleNavbar";
 import Navbar from "./Navbar";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -76,6 +78,8 @@ function App() {
         localStorage.setItem("theme", mode);
     }, [mode]);
 
+    const isMobile = useMediaQuery("(max-width:600px)");
+
     function handleThemeChange() {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
     }
@@ -91,10 +95,17 @@ function App() {
                             : { bgcolor: "#37474F", minHeight: "100vh" }
                     }
                 >
-                    <Navbar
-                        mode={mode}
-                        handleThemeChange={handleThemeChange}
-                    ></Navbar>
+                    {!isMobile ? (
+                        <Navbar
+                            mode={mode}
+                            handleThemeChange={handleThemeChange}
+                        />
+                    ) : (
+                        <CollapsibleNavbar
+                            mode={mode}
+                            handleThemeChange={handleThemeChange}
+                        />
+                    )}
                     <Routes>
                         <Route path="/" element={<HomePage />}></Route>
                         <Route path="/about" element={<About />}></Route>
