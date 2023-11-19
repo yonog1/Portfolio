@@ -45,17 +45,6 @@ function Contact() {
                                 github.com/yonog1
                             </Link>
                         </Typography>
-                        <Typography variant="body1" paragraph>
-                            UpWork:{" "}
-                            <Link
-                                href="https://www.upwork.com/freelancers/~011afb53578258acb8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://www.upwork.com/freelancers/~011afb53578258acb8
-                            </Link>
-                        </Typography>
-                        {/* Add more contact information if needed */}
                     </Box>
                 </Grid>
             </Grid>
