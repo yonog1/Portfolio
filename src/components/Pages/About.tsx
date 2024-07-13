@@ -17,11 +17,11 @@ function About() {
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Typography variant="body1" paragraph>
-                        Hello there! I'm Yonatan, am self taught developer who
-                        is very passionate about technology. I love learning new
+                        Hello there! I'm Yonatan, a self taught developer who is
+                        very passionate about technology. I love learning new
                         tools and technologies to help me build my projects and
                         apps in the quickest and simplest way possible. For me,
-                        each time im faced with a situation where I need to
+                        each time I'm faced with a situation where I need to
                         learn something new to implement or use, I see it as a
                         challenge!
                     </Typography>
@@ -36,34 +36,70 @@ function About() {
                     <Typography variant="body1" paragraph>
                         I'm a self-learner who is driven by curiosity,
                         introspective in the decisions I make and how I express
-                        myself and always try to learn from the people around
+                        myself, and always try to learn from the people around
                         me. I have experience working with Python and the Django
-                        framework, Javascript and Typescript for web programming
-                        and React and C# and .Net Core for desktop apps and web
-                        APIs. I believe in continuous learning and always strive
-                        to expand my knowledge in the ever-evolving tech
-                        landscape.
+                        and C# and .Net Core for desktop apps and web framework,
+                        Javascript for web programming and C# .Net for desktop
+                        apps and web APIs. {<br />}At ExLibris I work with
+                        Python, Powerhsell and Bash for scripting and
+                        automation, Gitlab and general OS administration and
+                        configuration for troubleshooting and constantly keep
+                        learning about storage administration for our Netapp
+                        systems and the VMware suit of services for a deeper
+                        understanding of our VM management tools and
+                        infrastructure. {<br />}I believe in continuous learning
+                        and always strive to expand my knowledge in the
+                        ever-evolving tech landscape.
                     </Typography>
                 </Grid>
             </Grid>
             {/* Additional Dynamic Section - Experience */}
-            <Box mt={4}>
-                <Typography variant="h2" gutterBottom>
-                    Experience
-                </Typography>
-                <Typography variant="h5" gutterBottom>
-                    System Administrator and Network Engineer | IDF | Mar 21 -
-                    Jun 23
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    - Developed and maintained IT and networking infrastructure.
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    - Collaborated with cross-functional teams to deliver
-                    high-quality networking and automation solutions for
-                    clients/users.
-                </Typography>
-            </Box>
+
+            <Typography variant="h5" gutterBottom>
+                Experience
+            </Typography>
+            <Grid container spacing={0}>
+                <Grid item xs={12} md={6}>
+                    <Box mt={4}>
+                        <Typography variant="h6" gutterBottom>
+                            System Administrator and Network Engineer | IDF |
+                            Mar 2021 - Jun 2023
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            - Developed and maintained IT and networking
+                            infrastructure.
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            - Collaborated with cross-functional teams to
+                            deliver high-quality networking and automation
+                            solutions for clients/users.
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Box mt={4}>
+                        <Typography variant="h6" gutterBottom>
+                            Associate Inrfastructure Engineer | ExLibris | Dec
+                            2023 - Now
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            - Hardware management and maintenance of the
+                            company’s Data Center and communication with
+                            vendors.
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            - Enterprise compute virtualization and storage
+                            virtualization platforms administration like VMware
+                            Horizon, vCenter and vSphere and Netapp Ontap and
+                            System Manager.
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            - Linux server administration and environment
+                            maintenance coordination with developers, QA, etc.
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
         </Box>
     );
 }
